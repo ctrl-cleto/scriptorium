@@ -1,0 +1,31 @@
+input {
+    keyboard {
+				repeat-delay 200 // Delay before repeats start
+				repeat-rate 45 // Delay between repeat presses
+        xkb {
+            layout "us"
+						variant "altgr-intl"
+            options "caps:escape_shifted_capslock"
+        }
+    }
+}
+
+layout {
+    gaps 5
+
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+		focus-ring {
+			width 1.5
+		}
+ empty-workspace-above-first
+}
+
+binds {
+    Mod+a { spawn "google-chrome-stable" "--app=https://gemini.google.com/"; }
+		Mod+b {spawn "google-chrome-stable" "--app=https://google.com";}
+}
